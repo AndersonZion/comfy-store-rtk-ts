@@ -1,0 +1,140 @@
+/*
+========================================
+  SERVICES
+========================================
+*/
+
+.services {
+  padding: 5rem 0;
+  background: var(--clr-primary-10);
+}
+
+.services h3,
+.services h4 {
+  color: var(--clr-primary-1);
+}
+
+/* Cabeçalho */
+
+.services-header {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.services-header h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+
+.services-header p {
+  margin: 0;
+  color: var(--clr-primary-3);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Grid dos serviços */
+
+.services-center {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Card */
+
+.service {
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  background: var(--clr-primary-7);
+  text-align: center;
+}
+
+.service h4 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.service p {
+  margin: 0;
+  color: var(--clr-primary-2);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Ícone */
+
+.service-icon {
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.25rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-1);
+}
+
+.service-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 576px) {
+  .services-center {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 992px) {
+  .services-header {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .services-header h3 {
+    font-size: 2rem;
+  }
+
+  .services-center {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+}
+
+/* Telas grandes */
+
+@media screen and (min-width: 1280px) {
+  .services {
+    padding: 5rem 0;
+  }
+
+  .services-center {
+    gap: 2.5rem;
+  }
+}
+
+/* Celular */
+
+@media screen and (max-width: 575px) {
+  .services {
+    padding: 3.5rem 0;
+  }
+
+  .services-header h3 {
+    font-size: 1.65rem;
+  }
+
+  .service {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,114 @@
+/* Navbar.css */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: min(1120px, 92%);
+  min-height: 72px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-right: auto;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-nav a {
+  color: var(--muted);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a.active {
+  color: var(--dark);
+}
+
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+  color: var(--dark);
+  font-size: 1.35rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -9px;
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.navbar a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* Celulares e tablets menores */
+@media (max-width: 600px) {
+  .navbar-inner {
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+  }
+
+  .navbar-nav {
+    gap: 14px;
+  }
+
+  .navbar-nav a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Celulares estreitos */
+@media (max-width: 380px) {
+  .navbar-inner {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.45rem;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .navbar-nav a {
+    font-size: 0.8rem;
+  }
+}

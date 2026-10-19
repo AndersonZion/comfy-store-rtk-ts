@@ -1,0 +1,41 @@
+/* ProductsPage.css */
+
+.products-page {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Contêiner principal: filtro + produtos */
+.products-page .section-center.products {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 2.5rem 2rem;
+  margin: 4rem auto;
+}
+
+/* Coluna esquerda */
+.products-page .filters {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Coluna direita */
+.products-page .products-content {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Tablet e desktop */
+@media screen and (min-width: 768px) {
+  .products-page .section-center.products {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+}
+
+/* Telas grandes */
+@media screen and (min-width: 1170px) {
+  .products-page .section-center.products {
+    column-gap: 3rem;
+  }
+}

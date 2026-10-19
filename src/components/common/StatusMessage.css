@@ -1,0 +1,22 @@
+/* StatusMessage.css */
+
+.status {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.status-loading {
+  color: var(--muted);
+  background: var(--surface);
+}
+
+.status-error {
+  color: #b42318;
+  background: #fef3f2;
+  border-color: #fecdca;
+}

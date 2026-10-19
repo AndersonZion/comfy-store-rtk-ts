@@ -1,0 +1,236 @@
+/* Filters.css */
+
+.filters {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.filters,
+.filters * {
+  box-sizing: border-box;
+}
+
+.filters .filters-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.filters form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Espaçamento entre os filtros */
+.filters .form-control,
+.filters .form-category,
+.filters .form-companies {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 1.5rem;
+}
+
+.filters h5 {
+  margin: 0 0 0.75rem;
+  color: var(--clr-grey-1);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Pesquisa */
+.filters .search-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-10);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.filters .search-input::placeholder {
+  text-transform: capitalize;
+}
+
+/* Categorias */
+.filters .form-category > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filters .form-category button {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.25rem 0;
+  color: var(--clr-grey-5);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  text-align: left;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.filters .form-category button.active {
+  color: var(--clr-grey-1);
+  border-bottom-color: var(--clr-grey-5);
+}
+
+/* Empresas */
+.filters .company {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.5rem;
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-10);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+}
+
+/* Cores */
+.filters .colors {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.filters .color-btn {
+  display: inline-flex;
+  flex: 0 0 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  opacity: 0.65;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filters .color-btn svg {
+  color: var(--clr-white);
+  font-size: 0.5rem;
+}
+
+.filters .color-btn.active {
+  opacity: 1;
+  outline: 1px solid var(--clr-grey-5);
+  outline-offset: 2px;
+}
+
+.filters .all-btn {
+  flex: 0 0 auto;
+  padding: 0.15rem 0;
+  color: var(--clr-grey-5);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.filters .all-btn.active {
+  border-bottom-color: var(--clr-grey-5);
+}
+
+/* Preço */
+.filters .price {
+  margin: 0 0 0.5rem;
+}
+
+.filters input[type="range"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0.75rem 0;
+  accent-color: var(--clr-primary-5);
+  cursor: pointer;
+}
+
+.filters .price-range {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--clr-grey-5);
+  font-size: 0.8rem;
+}
+
+/* Frete grátis */
+.filters .form-control.shipping {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+.filters .shipping label {
+  margin: 0;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.filters .shipping input {
+  flex: 0 0 auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Limpar filtros */
+.filters .clear-btn {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.4rem 0.65rem;
+  color: var(--clr-white);
+  background: var(--clr-red-dark);
+  border: none;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filters .clear-btn:hover {
+  background: var(--clr-primary-1);
+}
+
+/* Acessibilidade */
+.filters button:focus-visible,
+.filters input:focus-visible,
+.filters select:focus-visible {
+  outline: 2px solid var(--clr-primary-5);
+  outline-offset: 3px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .filters .filters-content {
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .filters .filters-content {
+    position: static;
+  }
+}

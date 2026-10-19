@@ -1,0 +1,113 @@
+/* Sort.css */
+
+.sort-container {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Botões Grid e List */
+.sort-container .btn-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-container .btn-container button {
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  color: var(--clr-grey-1);
+  background: transparent;
+  border: 1px solid var(--clr-grey-1);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.sort-container .btn-container button.active {
+  color: var(--clr-white);
+  background: var(--clr-grey-1);
+}
+
+/* Quantidade de produtos */
+.sort-container p {
+  margin: 0;
+  color: var(--clr-grey-3);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Divisor horizontal */
+.sort-container hr {
+  width: 100%;
+  min-width: 1rem;
+}
+
+/* Ordenação */
+.sort-container form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.sort-container form label {
+  margin: 0;
+  color: var(--clr-grey-1);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.sort-container .sort-input {
+  padding: 0.25rem 0;
+  color: var(--clr-primary-1);
+  background: transparent;
+  border: none;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .sort-container {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+
+  .sort-container p {
+    justify-self: end;
+  }
+
+  .sort-container hr {
+    display: none;
+  }
+
+  .sort-container form {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--clr-grey-8);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .sort-container {
+    column-gap: 0.5rem;
+  }
+
+  .sort-container form {
+    gap: 0.25rem;
+  }
+
+  .sort-container .sort-input {
+    max-width: 65%;
+    font-size: 0.8rem;
+  }
+}
